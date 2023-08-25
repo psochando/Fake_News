@@ -1,5 +1,6 @@
 joblib==1.1.1
 matplotlib==3.7.0
+nltk==3.7
 numpy==1.23.5
 pandas==1.5.3
 torch==1.12.1

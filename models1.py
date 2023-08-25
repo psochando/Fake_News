@@ -1,4 +1,4 @@
-# from nltk.corpus import stopwords
+from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import metrics
 from matplotlib import pyplot as plt
@@ -9,8 +9,8 @@ import pandas as pd
 import numpy as np
 import torch
 
-tokenizer = joblib.load('https://raw.githubusercontent.com/psochando/Fake_News/main/tokenizer_albert_VF.pkl')
-model = joblib.load('https://raw.githubusercontent.com/psochando/Fake_News/main/ALBERT_VF.pkl')
+tokenizer = joblib.load('tokenizer_albert_VF.pkl')
+model = joblib.load('ALBERT_VF.pkl')
 
 
 
