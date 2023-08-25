@@ -9,34 +9,7 @@ import pandas as pd
 import numpy as np
 import torch
 
-# tokenizer = joblib.load('tokenizer_albert_VF.pkl')
-# model = joblib.load('ALBERT_VF.pkl')
-
-
-
-import requests
-import joblib
-import streamlit as st
-
-tokenizer_url = 'https://raw.githubusercontent.com/psochando/Fake_News/main/tokenizer_albert_VF.pkl'
-model_url = 'https://raw.githubusercontent.com/psochando/Fake_News/main/ALBERT_VF.pkl'
-
-# Descargar el archivo tokenizer_albert_VF.pkl usando requests
-response_tokenizer = requests.get(tokenizer_url)
-if response_tokenizer.status_code == 200:
-    with open('tokenizer_albert_VF.pkl', 'wb') as f:
-        f.write(response_tokenizer.content)
-
-# Descargar el archivo ALBERT_VF.pkl usando requests
-response_model = requests.get(model_url)
-if response_model.status_code == 200:
-    with open('ALBERT_VF.pkl', 'wb') as f:
-        f.write(response_model.content)
-
-# Cargar el tokenizer usando joblib
 tokenizer = joblib.load('tokenizer_albert_VF.pkl')
-
-# Cargar el modelo usando joblib
 model = joblib.load('ALBERT_VF.pkl')
 
 
